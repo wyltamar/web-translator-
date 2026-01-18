@@ -1,0 +1,85 @@
+
+*{
+    padding: 0; /* Remover espaçamento interno */
+    margin: 0; /* Remover espaçamento externo */
+    box-sizing: border-box; /* Incluir bordas e padding na largura e altura totais */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Times, serif;
+}
+
+body{
+    background-image: url(/images/mapa.jpg);
+    background-size: cover; /* Cobrir toda a área de fundo */
+    background-position: center; /* Centralizar a imagem de fundo */
+    height: 100vh; /* Altura total da viewport */
+    display: flex;  /* Usar flexbox para layout - tornando a div flexível */
+    align-items: center;  /* Alinhar itens verticalmente ao centro */
+    justify-content: center; /* Alinhar itens horizontalmente ao centro */
+}
+
+.larger-box{
+    background-color: #000000f2;
+    width: 450px;  /* Largura */
+    border-radius: 25px;  /* Arredondar bordas */
+    padding: 20px; /* Espaçamento interno */
+}
+   
+.input-textarea{
+    width: 100%; /* Largura */
+    height: 100px; /* Altura */
+    border: none; /* Remover borda */
+    outline: none; /* Remover contorno ao focar */
+    border-radius: 15px;    /* Arredondar bordas */
+    background-color: #ffffff1a;
+    color: #ffffff; /* Cor do texto */
+    padding: 15px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    padding: 15px; /* Espaçamento interno */
+}
+
+.language-select{
+    width: 100%; /* Largura */
+    border: none; /* Remover borda */
+    border-radius: 20px; /* Arredondar bordas */
+    outline: none; /* Remover contorno ao focar */
+    padding: 10px; /* Espaçamento interno */
+    background-color: #ffffff1a;   /* Cor de fundo */
+    color: #ffffff; /* Cor do texto */
+}
+
+option{
+    background-color: #000000f2;
+    color: #ffffff;
+}
+
+button{
+    background-color: #ffffff1a;  /* Cor de fundo */
+    border: none;               /* Remover borda */
+    cursor: pointer;           /* Maozinha ao passar o mouse */
+    padding: 10px;        /* Espaçamento interno */
+    border-radius: 50%;  /* Tornar o botão circular */
+}
+
+.box-control{
+    display: flex; /* Usar flexbox para layout - torna a caixa flexível */
+    align-items: center; /* Alinhar itens verticalmente ao centro */
+    gap: 10px;      /* Espaçamento entre os itens */
+    margin-top: 20px; /* Margem superior */
+    margin-bottom: 20px; /* Margem inferior */
+}
+
+.result{
+    background-color: #ffffff1a; /* Cor de fundo */
+    border-radius: 15px; /* Arredondar bordas */
+    padding: 15px; /* Espaçamento interno */
+}
+
+.title-translation{
+    color: #ffff99; /* Cor do texto */
+    margin-bottom: 10px; /* Margem inferior */
+    font-size: 14px; /* Tamanho da fonte */
+}
+
+.translation{
+    color: #ffffff; /* Cor do texto */
+    font-size: 18px; /* Tamanho da fonte */
+}
