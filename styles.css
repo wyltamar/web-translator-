@@ -23,7 +23,7 @@ body{
     padding: 20px; /* Espaçamento interno */
 }
    
-.input-textarea{
+.input-text-area{
     width: 100%; /* Largura */
     height: 100px; /* Altura */
     border: none; /* Remover borda */
