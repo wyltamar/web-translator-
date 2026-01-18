@@ -16,5 +16,10 @@ async function translateText() {
     let translatedText = data.responseData.translatedText;
     console.log(translatedText);
 
+    const container = document.getElementById("translated-text");
+
+    container.innerHTML = `<div class="result"><p>${translatedText}</p></div>`;
+
+
 }
 
