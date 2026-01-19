@@ -35,6 +35,8 @@ function hearVoice(){
     recognitionVoice.onresult = (event) => { /* Define o que acontece quando o reconhecimento de voz retorna um resultado */
         let transcript = event.results[0][0].transcript; /* Obtém a transcrição do reconhecimento de voz */
         inputTextArea.value = transcript; /* Atualiza a área de texto de entrada com a transcrição */
+
+        translateText(); /* Chama a função de tradução para traduzir o texto transcrito */
     }
 }
 
