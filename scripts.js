@@ -22,3 +22,19 @@ async function translateText() {
 
 }
 
+function hearVoice(){
+
+    let voice = window.webkitSpeechRecognition /* Cria uma nova instância do reconhecimento de voz */
+    
+    let recognitionVoice = new voice(); /* Inicializa o reconhecimento de voz */
+
+    recognitionVoice.lang = "pt-BR"; /* Define o idioma do reconhecimento de voz */
+
+    recognitionVoice.start(); /* Inicia o reconhecimento de voz */
+
+    recognitionVoice.onresult = (event) => { /* Define o que acontece quando o reconhecimento de voz retorna um resultado */
+        let transcript = event.results[0][0].transcript; /* Obtém a transcrição do reconhecimento de voz */
+        inputTextArea.value = transcript; /* Atualiza a área de texto de entrada com a transcrição */
+    }
+}
+
