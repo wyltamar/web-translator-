@@ -1,25 +1,22 @@
 
-let inputTextArea = document.querySelector(".input-text-area");
+let inputTextArea = document.querySelector(".input-text-area"); /* Seleciona a área de texto de entrada */
+let translatedText = document.querySelector(".translation"); /* Seleciona o elemento onde o texto traduzido será exibido */
 
-async function translateText() {
+async function translateText() { 
     
    
    let address = "https://api.mymemory.translated.net/get?q=" + inputTextArea.value
-                     + "&langpair=pt|en";
+                     + "&langpair=pt|en"; /* Define o endereço da API de tradução com o texto de 
+                                                entrada e os idiomas */
 
-    let  response =  await fetch(address)
+    let  response =  await fetch(address) /* Faz uma requisição para a API de tradução */
 
-    let data = await response.json();
+    let data = await response.json(); /* Converte a resposta para JSON */
 
-    console.log(data);
     
-    let translatedText = data.responseData.translatedText;
-    console.log(translatedText);
+    translatedText.textContent = data.responseData.translatedText /* Atualiza o conteúdo do elemento com o texto traduzido */
 
-    const container = document.getElementById("translated-text");
-
-    container.innerHTML = `<div class="result"><p>${translatedText}</p></div>`;
-
+    
 
 }
 
