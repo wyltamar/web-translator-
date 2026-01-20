@@ -1,3 +1,14 @@
+/**
+ * Script para tradução de texto e reconhecimento de voz
+ * Utiliza a API MyMemory para tradução e a Web Speech API para reconhecimento de voz
+ * Autor: Wyltamar Oliveira
+ * Data: 2026-01-19 
+ * Version: 1.1 
+ * 
+ */
+
+
+/* Seleção dos elementos HTML necessários */ 
 
 let inputTextArea = document.querySelector(".input-text-area"); /* Seleciona a área de texto de entrada */
 let translatedText = document.querySelector(".translation"); /* Seleciona o elemento onde o texto traduzido será exibido */
@@ -38,5 +49,22 @@ function hearVoice(){
 
         translateText(); /* Chama a função de tradução para traduzir o texto transcrito */
     }
+}
+
+/* Função para verificar se há texto na área de entrada e habilitar/desabilitar o botão de tradução */
+function verifyInput(){
+    if(inputTextArea.value.trim() !== ""){
+        /* Habilitar o botão de tradução */
+        document.querySelector(".translate-button").disabled = true;
+    } else {
+        /* Desabilitar o botão de tradução */
+        document.querySelector(".translate-button").disabled = false;
+    }
+}
+
+function clearText(){
+    inputTextArea.value = ""; /* Limpa a área de texto de entrada */
+    translatedText.textContent = ""; /* Limpa o texto traduzido */
+    document.querySelector(".translate-button").disabled = true; /* Desabilita o botão de tradução */
 }
 
