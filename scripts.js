@@ -53,12 +53,14 @@ function hearVoice(){
 
 /* Função para verificar se há texto na área de entrada e habilitar/desabilitar o botão de tradução */
 function verifyInput(){
-    if(inputTextArea.value.trim() !== ""){
+
+    /* Verifica se a área de texto de entrada não está vazia */
+    if(inputTextArea.value.trim() !== "" || inputTextArea.value.trim().length > 0){
         /* Habilitar o botão de tradução */
-        document.querySelector(".translate-button").disabled = true;
+        document.querySelector(".translate-button").disabled = false;
     } else {
         /* Desabilitar o botão de tradução */
-        document.querySelector(".translate-button").disabled = false;
+        document.querySelector(".translate-button").disabled = true;
     }
 }
 
@@ -67,4 +69,5 @@ function clearText(){
     translatedText.textContent = ""; /* Limpa o texto traduzido */
     document.querySelector(".translate-button").disabled = true; /* Desabilita o botão de tradução */
 }
+
 
