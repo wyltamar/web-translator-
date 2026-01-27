@@ -68,3 +68,9 @@ function clearText(){
     document.querySelector(".translate-button").disabled = true; /* Desabilita o botão de tradução */
 }
 
+function translateBySelector(){
+    
+    if(inputTextArea.value.trim() !== ""){
+        translateText();
+    }
+}
