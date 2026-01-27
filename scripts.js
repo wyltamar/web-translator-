@@ -72,7 +72,7 @@ function clearText(){
 
 function translateBySelector(){
     
-    if(inputTextArea.value.trim() !== ""){
+    if(inputTextArea.value.trim() !== "" ){
         translateText();
     }
 }
